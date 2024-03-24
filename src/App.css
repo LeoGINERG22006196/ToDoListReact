@@ -1,38 +1,183 @@
-.App {
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif; /* Changement de la famille de police */
+}
+
+
+#app {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px; /* Augmentation de la taille de la police */
+  color: #ffffff; /* Rouge orangé */
+  text-align: center; /* Alignement du texte au centre */
+}
+
+
+.taskNumber {
+  font-size: 20px;
+  color: #ff6347; /* Rouge orangé */
+  margin-bottom: 10px; /* Réduction de la marge inférieure */
+  text-align: center; /* Alignement du texte au centre */
+}
+
+
+.done {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+}
+
+.searchBar {
+  border: 2px solid #cdd8ee;
+  border-radius: 5px;
+  padding: 8px;
   text-align: center;
+  height: 36px;
+  width: 200px;
+  font-size: 16px;
+  outline: none; /* Retire la bordure de mise au point */
+  transition: border-color 0.2s ease; /* Animation de transition pour la couleur de la bordure */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchBar:focus {
+  border-color: #04ab33; /* Couleur de la bordure lorsque le champ est en focus */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.delete {
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.delete:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+
+.order {
+  margin-left: 5px;
+}
+
+.up,
+.down {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.up:hover,
+.down:hover {
+  background-color: #218838;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  align-items: center; /* Ajout pour aligner verticalement le texte et les boutons */
+  justify-content: space-between; /* Ajout pour espacer les boutons et le texte */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li:hover {
+  background-color: #e0e0e0;
 }
+
+
+
+span {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.checkBox {
+  transform: scale(1.5);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.orderDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputAddTask {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  height: 40px;
+  width: 250px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.inputAddTask:focus {
+  border-color: #0056b3;
+}
+
+
+.buttonAddTask {
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.buttonAddTask:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
